@@ -17,51 +17,57 @@ export default function App() {
 
   if (view === "service") {
     return (
-      <div className="page servicePage">
-        <div className="serviceOverlay"></div>
-        <div className="serviceWrap">
-          <button className="backBtn" onClick={() => setView("home")}>
-            ← Inapoi la site
+      <div className="page service-page">
+        <div className="bg-image"></div>
+        <div className="bg-overlay"></div>
+
+        <div className="service-container">
+          <button className="back-button" onClick={() => setView("home")}>
+            ← Inapoi
           </button>
 
-          <div className="serviceCardMain">
-            <div className="serviceBadge">SERVICE GSM RAPID</div>
-            <h1 className="serviceTitle">Cu ce te putem ajuta?</h1>
-            <p className="serviceText">
-              Spune-ne problema telefonului tau, iar noi iti raspundem in cel mai scurt timp.
-              Pentru ajutor rapid, scrie-ne direct pe WhatsApp si revenim cat mai repede.
+          <div className="service-card">
+            <div className="small-badge">SERVICE GSM RAPID</div>
+
+            <h1 className="service-title">Cu ce te putem ajuta?</h1>
+
+            <p className="service-description">
+              Spune-ne rapid ce problema ai, iar noi te ajutam in cel mai scurt
+              timp. Pentru raspuns rapid, scrie-ne direct pe WhatsApp.
             </p>
 
-            <div className="helpGrid">
-              <div className="helpBox">Schimb display</div>
-              <div className="helpBox">Inlocuire baterie</div>
-              <div className="helpBox">Probleme incarcare</div>
-              <div className="helpBox">Folie / protectie</div>
-              <div className="helpBox">Diagnostic rapid</div>
-              <div className="helpBox">Alte probleme GSM</div>
+            <div className="service-grid">
+              <div className="service-box">Schimb display</div>
+              <div className="service-box">Schimb baterie</div>
+              <div className="service-box">Probleme la incarcare</div>
+              <div className="service-box">Montaj folie</div>
+              <div className="service-box">Diagnostic rapid</div>
+              <div className="service-box">Alte probleme GSM</div>
             </div>
 
-            <div className="serviceCtaRow">
+            <div className="cta-row">
               <a
-                className="whatsappBig"
                 href="https://wa.me/40756423828"
                 target="_blank"
                 rel="noreferrer"
+                className="whatsapp-button"
               >
                 Scrie-ne pe WhatsApp acum
               </a>
-              <a className="callBtn" href="tel:0756423828">
+
+              <a href="tel:0756423828" className="call-button">
                 Suna acum
               </a>
             </div>
 
-            <div className="serviceContactInfo">
-              <div>
-                <span className="contactLabel">Telefon</span>
+            <div className="contact-grid">
+              <div className="contact-card">
+                <span className="label">Telefon</span>
                 <strong>0756 423 828</strong>
               </div>
-              <div>
-                <span className="contactLabel">Locatie</span>
+
+              <div className="contact-card">
+                <span className="label">Locatie</span>
                 <strong>Mall Baneasa · in fata la Media Galaxy</strong>
               </div>
             </div>
@@ -73,86 +79,102 @@ export default function App() {
 
   return (
     <div className="page">
-      <div className="heroBg"></div>
-      <div className="heroGlow"></div>
+      <div className="bg-image"></div>
+      <div className="bg-overlay"></div>
 
       <header className="hero">
-        <div className="heroLeft">
-          <div className="topTag">HOBBY GSM · FABY GSM</div>
-          <h1 className="mainTitle">Futuristic GSM Experience</h1>
-          <p className="heroText">
+        <div className="hero-left">
+          <div className="top-tag">HOBBY GSM · FABY GSM</div>
+
+          <h1 className="main-title">Futuristic GSM Experience</h1>
+
+          <p className="hero-text">
             Accesorii GSM, produse premium si service rapid intr-un stil modern,
             futurist, cu imagine puternica si contact direct pentru clienti.
           </p>
 
-          <div className="heroButtons">
-            <a className="primaryBtn" href="https://wa.me/40756423828" target="_blank" rel="noreferrer">
+          <div className="hero-buttons">
+            <a
+              className="primary-btn"
+              href="https://wa.me/40756423828"
+              target="_blank"
+              rel="noreferrer"
+            >
               WhatsApp rapid
             </a>
-            <a className="secondaryBtn" href="#categorii">
+
+            <a className="secondary-btn" href="#categorii">
               Vezi categoriile
             </a>
           </div>
         </div>
 
-        <div className="heroRight">
-          <div className="logoPanel">
-            <div className="logoCircle">FG</div>
-            <div className="logoName">FABY GSM</div>
-            <div className="logoSub">STAY IN STYLE</div>
-            <div className="miniLine"></div>
-            <div className="miniText">QUALITY · SPEED · STYLE</div>
+        <div className="hero-right">
+          <div className="logo-panel">
+            <div className="logo-circle">FG</div>
+            <div className="logo-name">FABY GSM</div>
+            <div className="logo-sub">STAY IN STYLE</div>
+            <div className="mini-line"></div>
+            <div className="mini-text">QUALITY · SPEED · STYLE</div>
           </div>
         </div>
       </header>
 
-      <section className="categorySection" id="categorii">
-        <div className="sectionHead">
-          <p className="sectionTag">CATEGORII</p>
+      <section className="category-section" id="categorii">
+        <div className="section-head">
+          <p className="section-tag">CATEGORII</p>
           <h2>Butoane rapide pentru produsele tale</h2>
         </div>
 
-        <div className="categoryGrid">
+        <div className="category-grid">
           {categories.map((item) => (
-            <a key={item} href="https://wa.me/40756423828" target="_blank" rel="noreferrer" className="categoryCard">
+            <a
+              key={item}
+              href="https://wa.me/40756423828"
+              target="_blank"
+              rel="noreferrer"
+              className="category-card"
+            >
               {item}
             </a>
           ))}
         </div>
       </section>
 
-      <section className="serviceFastSection">
-        <div className="serviceFastCard">
+      <section className="service-fast-section">
+        <div className="service-fast-card">
           <div>
-            <p className="sectionTag">SERVICE</p>
+            <p className="section-tag">SERVICE</p>
             <h2>Service GSM Rapid</h2>
-            <p className="serviceFastText">
-              Apasa pe butonul de mai jos si intri intr-o pagina dedicata unde clientul
-              poate vedea imediat cum sa ia legatura cu tine pentru ajutor rapid.
+            <p className="service-fast-text">
+              Apasa pe butonul de mai jos si intri intr-o pagina dedicata unde
+              clientul poate vedea imediat cum sa ia legatura cu tine pentru
+              ajutor rapid.
             </p>
           </div>
 
-          <button className="serviceBigBtn" onClick={() => setView("service")}>
+          <button className="service-big-btn" onClick={() => setView("service")}>
             SERVICE GSM RAPID
           </button>
         </div>
       </section>
 
-      <section className="contactStrip">
-        <div className="contactItem">
-          <span className="contactLabel">Telefon</span>
+      <section className="contact-strip">
+        <div className="contact-item">
+          <span className="label">Telefon</span>
           <strong>0756 423 828</strong>
         </div>
-        <div className="contactItem">
-          <span className="contactLabel">Locatie</span>
+
+        <div className="contact-item">
+          <span className="label">Locatie</span>
           <strong>Mall Baneasa · in fata la Media Galaxy</strong>
         </div>
-        <div className="contactItem">
-          <span className="contactLabel">WhatsApp</span>
-          <strong>Scrie-ne pe WhatsApp</strong>
+
+        <div className="contact-item">
+          <span className="label">WhatsApp</span>
+          <strong>Scrie-ne acum</strong>
         </div>
       </section>
     </div>
   );
 }
- 

@@ -28,17 +28,17 @@ export default function App() {
             </div>
 
             <div className="highlights">
-              <div className="highlight">Design premium inspirat din showroom</div>
-              <div className="highlight">Matte black, auriu și accent turcoaz</div>
-              <div className="highlight">Imagine serioasă și elegantă</div>
+              <div className="highlight">Design premium </div>
+              <div className="highlight">Matte black</div>
+              <div className="highlight">seriozitate</div>
             </div>
           </div>
 
           <div className="right">
             <div className="logoCard">
               <div className="logoCircle">
-                <span className="f">F</span>
-                <span className="g">G</span>
+                <span className="f">GAMING</span>
+                <span className="g">GSM</span>
               </div>
 
               <div className="brand">
@@ -78,9 +78,9 @@ export default function App() {
             </div>
 
             <div className="infoBox">
-              <div className="small">Locație</div>
-              <div className="strong">Mall Băneasa</div>
-              <div className="muted">În față la Media Galaxy</div>
+              <div className="small">VA ASTEPTAM IN CELE 5 LOCATII</div>
+              <div className="strong">Mall Băneasa/Carrefour Orhideea/Piata Romana </div>
+              <div className="muted">SERVICE GSM PREMIUM</div>
             </div>
           </div>
         </div>
@@ -91,11 +91,11 @@ export default function App() {
         <h2>Ce oferim</h2>
 
         <div className="services">
-          <div className="card">Schimb display și touchscreen</div>
-          <div className="card">Înlocuire baterie</div>
-          <div className="card">Montaj folie și sticlă de protecție</div>
-          <div className="card">Reparații mufă încărcare</div>
-          <div className="card">Huse, cabluri, încărcătoare și accesorii</div>
+          <div className="card">SchimbAM display și touchscreen pentru orice gadget</div>
+          <div className="card">Înlocuire baterie </div>
+          <div className="card">Montaj folie și sticlă de protecție calitate inalta</div>
+          <div className="card">Reparații mufă încărcare / difuzor /microfon</div>
+          <div className="card">Huse, cabluri, încărcătoare și accesorii / suporti auto peste 50 de modele </div>
           <div className="card">Consultanță pentru alegerea accesoriilor</div>
         </div>
       </section>
@@ -106,15 +106,15 @@ export default function App() {
             <p className="sectionTag">CONTACT</p>
             <h2>FABY GSM</h2>
             <p className="text">
-              Magazin de accesorii GSM și service telefoane, cu imagine premium
-              și contact rapid.
+              Magazin de accesorii GSM și service 
+
             </p>
           </div>
 
           <div className="callBox">
             <div className="small">Sună acum</div>
             <div className="strong bigPhone">0756 423 828</div>
-            <div className="muted">Mall Băneasa • în față la Media Galaxy</div>
+            <div className="muted">super pret</div>
           </div>
         </div>
       </section>

@@ -100,7 +100,9 @@ button {
   font-weight: 900;
   letter-spacing: -1px;
   background: linear-gradient(90deg, #c8fdff 0%, #4cefff 40%, #a47cff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
@@ -209,7 +211,9 @@ button {
   font-size: 44px;
   font-weight: 900;
   background: linear-gradient(90deg, #d7feff, #00ebff 45%, #9a70ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
@@ -264,7 +268,7 @@ button {
 }
 
 .category-card {
-  border: none;
+  border: 1px solid rgba(0, 238, 255, 0.22);
   cursor: pointer;
   min-height: 84px;
   padding: 18px;
@@ -274,7 +278,6 @@ button {
   font-weight: 800;
   color: #d7fbff;
   background: rgba(8, 12, 22, 0.72);
-  border: 1px solid rgba(0, 238, 255, 0.22);
   box-shadow: 0 0 24px rgba(0, 238, 255, 0.08);
 }
 
@@ -370,7 +373,9 @@ button {
 
 .service-title {
   background: linear-gradient(90deg, #ffffff 0%, #66f7ff 45%, #9d74ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
@@ -456,11 +461,19 @@ button {
   color: #ffffff;
 }
 
-.product-card p {
-  margin: 0 0 18px;
+.product-price {
+  margin: 0 0 10px;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 900;
   color: #65f7ff;
+}
+
+.product-details {
+  min-height: 48px;
+  margin: 0 0 18px;
+  color: #cbd7ee;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .product-btn {

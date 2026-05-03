@@ -75,6 +75,13 @@ button {
   align-items: center;
 }
 
+.top-tag,
+.section-tag,
+.small-badge {
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
 .top-tag {
   display: inline-block;
   padding: 10px 16px;
@@ -83,8 +90,6 @@ button {
   border: 1px solid rgba(0, 238, 255, 0.35);
   color: #75f7ff;
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
   box-shadow: 0 0 20px rgba(0, 238, 255, 0.15);
 }
 
@@ -97,14 +102,18 @@ button {
   background: linear-gradient(90deg, #c8fdff 0%, #4cefff 40%, #a47cff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 18px rgba(50, 235, 255, 0.15);
+}
+
+.hero-text,
+.service-fast-text,
+.service-description {
+  color: #d3dcf6;
+  line-height: 1.7;
 }
 
 .hero-text {
   max-width: 760px;
   font-size: 20px;
-  line-height: 1.7;
-  color: #d2d9ef;
 }
 
 .hero-buttons {
@@ -119,7 +128,9 @@ button {
 .service-big-btn,
 .whatsapp-button,
 .call-button,
-.back-button {
+.back-button,
+.category-card,
+.product-card {
   transition: 0.25s ease;
 }
 
@@ -131,37 +142,50 @@ button {
   font-size: 16px;
 }
 
-.primary-btn {
+.primary-btn,
+.service-big-btn,
+.whatsapp-button {
   background: linear-gradient(90deg, #00d9ff, #6ff6ff);
   color: #021219;
   box-shadow: 0 0 24px rgba(0, 238, 255, 0.35);
 }
 
-.primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 32px rgba(0, 238, 255, 0.55);
-}
-
-.secondary-btn {
+.secondary-btn,
+.back-button,
+.call-button {
   background: rgba(255, 255, 255, 0.04);
   color: #ddfaff;
   border: 1px solid rgba(0, 238, 255, 0.3);
 }
 
-.secondary-btn:hover {
-  background: rgba(0, 238, 255, 0.08);
-  transform: translateY(-2px);
+.primary-btn:hover,
+.secondary-btn:hover,
+.service-big-btn:hover,
+.whatsapp-button:hover,
+.call-button:hover,
+.back-button:hover,
+.category-card:hover,
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.logo-panel,
+.service-fast-card,
+.service-card,
+.contact-item,
+.contact-card,
+.product-card {
+  background: rgba(8, 12, 22, 0.78);
+  border: 1px solid rgba(0, 238, 255, 0.18);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 28px rgba(0, 238, 255, 0.08),
+    0 0 36px rgba(143, 73, 255, 0.08);
 }
 
 .logo-panel {
   border-radius: 32px;
   padding: 36px 26px;
-  background: rgba(8, 12, 22, 0.74);
-  border: 1px solid rgba(0, 238, 255, 0.2);
-  box-shadow:
-    0 0 40px rgba(0, 238, 255, 0.12),
-    0 0 60px rgba(143, 73, 255, 0.08);
-  backdrop-filter: blur(10px);
   text-align: center;
 }
 
@@ -184,7 +208,6 @@ button {
 .logo-name {
   font-size: 44px;
   font-weight: 900;
-  letter-spacing: 1px;
   background: linear-gradient(90deg, #d7feff, #00ebff 45%, #9a70ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -194,7 +217,6 @@ button {
   margin-top: 10px;
   font-size: 28px;
   font-weight: 900;
-  color: #f8fbff;
 }
 
 .mini-line {
@@ -226,15 +248,12 @@ button {
   line-height: 1.1;
   font-weight: 900;
   color: #f7fbff;
-  text-shadow: 0 0 14px rgba(255, 255, 255, 0.08);
 }
 
 .section-tag {
   margin: 0 0 10px;
   color: #65f7ff;
   font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 3px;
 }
 
 .category-grid {
@@ -245,9 +264,8 @@ button {
 }
 
 .category-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
+  cursor: pointer;
   min-height: 84px;
   padding: 18px;
   border-radius: 20px;
@@ -258,13 +276,11 @@ button {
   background: rgba(8, 12, 22, 0.72);
   border: 1px solid rgba(0, 238, 255, 0.22);
   box-shadow: 0 0 24px rgba(0, 238, 255, 0.08);
-  backdrop-filter: blur(8px);
 }
 
 .category-card:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: rgba(0, 238, 255, 0.5);
-  box-shadow: 0 0 30px rgba(0, 238, 255, 0.25);
+  border-color: rgba(0, 238, 255, 0.55);
+  box-shadow: 0 0 32px rgba(0, 238, 255, 0.25);
   background: rgba(0, 238, 255, 0.08);
 }
 
@@ -272,12 +288,6 @@ button {
 .service-card {
   border-radius: 30px;
   padding: 30px;
-  background: rgba(8, 12, 22, 0.76);
-  border: 1px solid rgba(143, 73, 255, 0.22);
-  box-shadow:
-    0 0 28px rgba(143, 73, 255, 0.12),
-    0 0 36px rgba(0, 238, 255, 0.08);
-  backdrop-filter: blur(10px);
 }
 
 .service-fast-text,
@@ -285,8 +295,6 @@ button {
   margin-top: 14px;
   max-width: 850px;
   font-size: 19px;
-  line-height: 1.7;
-  color: #d3dcf6;
 }
 
 .service-big-btn {
@@ -297,14 +305,6 @@ button {
   border-radius: 18px;
   font-size: 24px;
   font-weight: 900;
-  color: #03161d;
-  background: linear-gradient(90deg, #00dcff, #78fbff);
-  box-shadow: 0 0 28px rgba(0, 238, 255, 0.38);
-}
-
-.service-big-btn:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 0 40px rgba(0, 238, 255, 0.55);
 }
 
 .contact-strip {
@@ -320,8 +320,6 @@ button {
 .contact-card {
   padding: 22px;
   border-radius: 22px;
-  background: rgba(8, 12, 22, 0.76);
-  border: 1px solid rgba(0, 238, 255, 0.15);
 }
 
 .label {
@@ -340,7 +338,8 @@ button {
   line-height: 1.5;
 }
 
-.service-page {
+.service-page,
+.category-page {
   padding: 40px 20px 70px;
 }
 
@@ -351,18 +350,11 @@ button {
 
 .back-button {
   margin-bottom: 20px;
-  border: 1px solid rgba(0, 238, 255, 0.3);
-  background: rgba(255, 255, 255, 0.04);
-  color: #dcfaff;
   padding: 12px 18px;
   border-radius: 14px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-}
-
-.back-button:hover {
-  background: rgba(0, 238, 255, 0.08);
 }
 
 .small-badge {
@@ -374,8 +366,6 @@ button {
   border: 1px solid rgba(143, 73, 255, 0.35);
   color: #c69cff;
   font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 2px;
 }
 
 .service-title {
@@ -411,27 +401,16 @@ button {
 
 .whatsapp-button,
 .call-button {
+  display: inline-block;
   padding: 16px 26px;
   border-radius: 16px;
   font-size: 18px;
   font-weight: 900;
 }
 
-.whatsapp-button {
-  background: linear-gradient(90deg, #00dcff, #79fbff);
-  color: #02161c;
-  box-shadow: 0 0 28px rgba(0, 238, 255, 0.36);
-}
-
 .call-button {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(143, 73, 255, 0.35);
   color: #f0e7ff;
-}
-
-.whatsapp-button:hover,
-.call-button:hover {
-  transform: translateY(-2px);
+  border-color: rgba(143, 73, 255, 0.35);
 }
 
 .contact-grid {
@@ -440,6 +419,59 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+
+/* PRODUSE */
+
+.product-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  border-radius: 24px;
+  padding: 18px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  border-color: rgba(0, 238, 255, 0.55);
+  box-shadow: 0 0 34px rgba(0, 238, 255, 0.25);
+}
+
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.product-card p {
+  margin: 0 0 18px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #65f7ff;
+}
+
+.product-btn {
+  width: 100%;
+  text-align: center;
+  padding: 13px 16px;
+  font-size: 15px;
+  border-radius: 14px;
+}
+
+/* TELEFON / TABLETA */
 
 @media (max-width: 1024px) {
   .hero {
@@ -450,10 +482,7 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact-strip {
-    grid-template-columns: 1fr;
-  }
-
+  .contact-strip,
   .service-grid,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -472,7 +501,7 @@ button {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 50px;
+    padding: 46px 18px 30px;
   }
 
   .main-title {
@@ -485,13 +514,16 @@ button {
     font-size: 16px;
   }
 
-  .category-grid {
+  .category-grid,
+  .product-grid {
     grid-template-columns: 1fr;
   }
 
   .service-big-btn,
   .whatsapp-button,
-  .call-button {
+  .call-button,
+  .primary-btn,
+  .secondary-btn {
     width: 100%;
     text-align: center;
   }
@@ -502,5 +534,14 @@ button {
 
   .logo-sub {
     font-size: 22px;
+  }
+
+  .service-card,
+  .service-fast-card {
+    padding: 22px;
+  }
+
+  .product-card img {
+    height: 240px;
   }
 }

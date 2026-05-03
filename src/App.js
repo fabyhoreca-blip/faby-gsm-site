@@ -3,6 +3,7 @@ import "./style.css";
 
 export default function App() {
   const [view, setView] = useState("home");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const categories = [
     "Adaptoare",
@@ -14,6 +15,69 @@ export default function App() {
     "Gadgeturi",
     "Baterii externe",
   ];
+
+  const products = [
+    {
+      name: "Produs exemplu 1",
+      price: "De la 30 lei",
+      image: "/produs1.jpg",
+    },
+    {
+      name: "Produs exemplu 2",
+      price: "De la 40 lei",
+      image: "/produs2.jpg",
+    },
+    {
+      name: "Produs exemplu 3",
+      price: "Pret la cerere",
+      image: "/produs3.jpg",
+    },
+  ];
+
+  if (view === "category") {
+    return (
+      <div className="page category-page">
+        <div className="bg-image"></div>
+        <div className="bg-overlay"></div>
+
+        <div className="service-container">
+          <button className="back-button" onClick={() => setView("home")}>
+            ← Inapoi
+          </button>
+
+          <div className="service-card">
+            <div className="small-badge">CATEGORIE PRODUSE</div>
+
+            <h1 className="service-title">{selectedCategory}</h1>
+
+            <p className="service-description">
+              Aici vor fi afisate produsele din categoria {selectedCategory}.
+              Poti adauga poze, preturi si detalii pentru fiecare produs.
+            </p>
+
+            <div className="product-grid">
+              {products.map((product, index) => (
+                <div className="product-card" key={index}>
+                  <img src={product.image} alt={product.name} />
+                  <h3>{product.name}</h3>
+                  <p>{product.price}</p>
+
+                  <a
+                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza un produs din categoria ${selectedCategory}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="whatsapp-button product-btn"
+                  >
+                    Intreaba pe WhatsApp
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (view === "service") {
     return (
@@ -128,15 +192,16 @@ export default function App() {
 
         <div className="category-grid">
           {categories.map((item) => (
-            <a
+            <button
               key={item}
-              href="https://wa.me/40756423828"
-              target="_blank"
-              rel="noreferrer"
               className="category-card"
+              onClick={() => {
+                setSelectedCategory(item);
+                setView("category");
+              }}
             >
               {item}
-            </a>
+            </button>
           ))}
         </div>
       </section>

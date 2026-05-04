@@ -17,149 +17,81 @@ export default function App() {
   ];
 
   const productsByCategory = {
-    Adaptoare: [
+    Huse: [
       {
-        name: "Adaptor USB-C",
-        price: "De la 25 lei",
-        image: "/adaptor1.jpg",
-        details: "Adaptor rapid pentru telefoane si accesorii moderne.",
+        name: "Husă iPhone Premium",
+        price: "30 lei",
+        image: "/husa1.jpg",
+        description: "Husă elegantă, protecție bună pentru utilizare zilnică.",
       },
       {
-        name: "Adaptor Lightning",
-        price: "De la 30 lei",
-        image: "/adaptor2.jpg",
-        details: "Compatibil cu iPhone si accesorii Lightning.",
+        name: "Husă Samsung Elegantă",
+        price: "35 lei",
+        image: "/husa2.jpg",
+        description: "Design modern, material plăcut și protecție pentru margini.",
+      },
+      {
+        name: "Husă Transparentă",
+        price: "25 lei",
+        image: "/husa3.jpg",
+        description: "Husă transparentă, slim, potrivită pentru mai multe modele.",
+      },
+      {
+        name: "Husă Anti-șoc",
+        price: "40 lei",
+        image: "/husa4.jpg",
+        description: "Protecție extra pentru căzături și lovituri.",
+      },
+      {
+        name: "Husă Luxury",
+        price: "50 lei",
+        image: "/husa5.jpg",
+        description: "Aspect premium, potrivită pentru un telefon protejat și stilat.",
       },
     ],
 
     Cabluri: [
       {
         name: "Cablu USB-C",
-        price: "De la 30 lei",
-        image: "/cablu1.jpg",
-        details: "Cablu rezistent pentru incarcare rapida si transfer date.",
+        price: "30 lei",
+        image: "/produs1.jpg",
+        description: "Cablu rapid pentru încărcare și transfer de date.",
       },
       {
-        name: "Cablu iPhone Lightning",
-        price: "De la 35 lei",
-        image: "/cablu2.jpg",
-        details: "Cablu pentru iPhone, iPad si alte dispozitive Apple.",
+        name: "Cablu Lightning",
+        price: "40 lei",
+        image: "/produs2.jpg",
+        description: "Cablu compatibil iPhone, ideal pentru utilizare zilnică.",
       },
       {
-        name: "Cablu Type-C la Type-C",
-        price: "De la 40 lei",
-        image: "/cablu3.jpg",
-        details: "Ideal pentru incarcare rapida si telefoane noi.",
-      },
-    ],
-
-    "Suporti auto": [
-      {
-        name: "Suport auto magnetic",
-        price: "De la 35 lei",
-        image: "/suport1.jpg",
-        details: "Suport stabil pentru masina, usor de folosit.",
-      },
-      {
-        name: "Suport auto cu prindere",
-        price: "De la 45 lei",
-        image: "/suport2.jpg",
-        details: "Prindere sigura pentru bord sau grila de ventilatie.",
-      },
-    ],
-
-    Huse: [
-      products: [
-        {
-          name: "Husă iPhone Premium",
-          price: "30 lei",
-          image: "/husa1.jpg"
-        },
-        {
-          name: "Husă Samsung Elegantă",
-          price: "35 lei",
-          image: "/husa2.jpg"
-        },
-        {
-          name: "Husă Transparentă",
-          price: "25 lei",
-          image: "/husa3.jpg"
-        },
-        {
-          name: "Husă Anti-șoc",
-          price: "40 lei",
-          image: "/husa4.jpg"
-        },
-        {
-          name: "Husă Luxury",
-          price: "50 lei",
-          image: "/husa5.jpg"
-        }
-      ]
-    ],
-
-    Casti: [
-      {
-        name: "Casti Bluetooth",
-        price: "De la 70 lei",
-        image: "/casti1.jpg",
-        details: "Sunet clar, conectare rapida si autonomie buna.",
-      },
-      {
-        name: "Casti cu fir Type-C",
-        price: "De la 35 lei",
-        image: "/casti2.jpg",
-        details: "Pentru telefoane fara mufa jack.",
-      },
-    ],
-
-    "Folii de protectie": [
-      {
-        name: "Folie sticla 9H",
-        price: "De la 30 lei",
-        image: "/folie1.jpg",
-        details: "Protectie buna pentru ecran.",
-      },
-      {
-        name: "Folie privacy",
-        price: "De la 45 lei",
-        image: "/folie2.jpg",
-        details: "Protejeaza ecranul si intimitatea.",
-      },
-    ],
-
-    Gadgeturi: [
-      {
-        name: "Mini boxa Bluetooth",
-        price: "Pret la cerere",
-        image: "/gadget1.jpg",
-        details: "Gadget util pentru muzica si calatorii.",
-      },
-      {
-        name: "Incarcator auto rapid",
-        price: "De la 40 lei",
-        image: "/gadget2.jpg",
-        details: "Incarcare rapida direct in masina.",
-      },
-    ],
-
-    "Baterii externe": [
-      {
-        name: "Power bank 10000 mAh",
-        price: "De la 80 lei",
-        image: "/baterie1.jpg",
-        details: "Baterie externa compacta pentru utilizare zilnica.",
-      },
-      {
-        name: "Power bank 20000 mAh",
-        price: "De la 120 lei",
-        image: "/baterie2.jpg",
-        details: "Capacitate mare pentru mai multe incarcari.",
+        name: "Cablu Type-C Premium",
+        price: "45 lei",
+        image: "/produs3.jpg",
+        description: "Cablu rezistent, cu încărcare rapidă.",
       },
     ],
   };
 
-  const selectedProducts = productsByCategory[selectedCategory] || [];
+  const products = productsByCategory[selectedCategory] || [
+    {
+      name: "Produs disponibil în magazin",
+      price: "Preț la cerere",
+      image: "/produs1.jpg",
+      description: "Contactează-ne pe WhatsApp pentru detalii și disponibilitate.",
+    },
+    {
+      name: "Produs premium GSM",
+      price: "Preț la cerere",
+      image: "/produs2.jpg",
+      description: "Produs disponibil în funcție de stoc.",
+    },
+    {
+      name: "Accesoriu GSM",
+      price: "Preț la cerere",
+      image: "/produs3.jpg",
+      description: "Întreabă-ne rapid pe WhatsApp pentru compatibilitate.",
+    },
+  ];
 
   if (view === "category") {
     return (
@@ -178,22 +110,20 @@ export default function App() {
             <h1 className="service-title">{selectedCategory}</h1>
 
             <p className="service-description">
-              Aici poti adauga produsele tale din categoria {selectedCategory}.
-              Fiecare produs are poza, pret, detalii si buton direct catre
-              WhatsApp.
+              Produse selectate pentru categoria {selectedCategory}. Detalii și
+              disponibilitate direct pe WhatsApp.
             </p>
 
             <div className="product-grid">
-              {selectedProducts.map((product, index) => (
+              {products.map((product, index) => (
                 <div className="product-card" key={index}>
                   <img src={product.image} alt={product.name} />
-
                   <h3>{product.name}</h3>
-                  <p className="product-price">{product.price}</p>
-                  <p className="product-details">{product.details}</p>
+                  <p>{product.price}</p>
+                  <p className="product-description">{product.description}</p>
 
                   <a
-                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza produsul: ${product.name} din categoria ${selectedCategory}`}
+                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza: ${product.name}`}
                     target="_blank"
                     rel="noreferrer"
                     className="whatsapp-button product-btn"
@@ -280,7 +210,7 @@ export default function App() {
         <div className="hero-left">
           <div className="top-tag">HOBBY GSM · FABY GSM</div>
 
-          <h1 className="main-title">Futuristic GSM Experience</h1>
+          <h1 className="main-title">HOBBY GSM Experience</h1>
 
           <p className="hero-text">
             Accesorii GSM, produse premium si service rapid intr-un stil modern,
@@ -324,7 +254,6 @@ export default function App() {
           {categories.map((item) => (
             <button
               key={item}
-              type="button"
               className="category-card"
               onClick={() => {
                 setSelectedCategory(item);

@@ -22,76 +22,189 @@ export default function App() {
         name: "Husă iPhone Premium",
         price: "30 lei",
         image: "/husa1.jpg",
-        description: "Husă elegantă, protecție bună pentru utilizare zilnică.",
+        description: "Husă elegantă, protecție bună și aspect premium.",
       },
       {
         name: "Husă Samsung Elegantă",
         price: "35 lei",
         image: "/husa2.jpg",
-        description: "Design modern, material plăcut și protecție pentru margini.",
+        description: "Design modern, material plăcut și protecție pe margini.",
       },
       {
         name: "Husă Transparentă",
         price: "25 lei",
         image: "/husa3.jpg",
-        description: "Husă transparentă, slim, potrivită pentru mai multe modele.",
+        description: "Husă slim, transparentă, potrivită pentru utilizare zilnică.",
       },
       {
         name: "Husă Anti-șoc",
         price: "40 lei",
         image: "/husa4.jpg",
-        description: "Protecție extra pentru căzături și lovituri.",
+        description: "Protecție extra pentru lovituri și căzături.",
       },
       {
         name: "Husă Luxury",
         price: "50 lei",
         image: "/husa5.jpg",
-        description: "Aspect premium, potrivită pentru un telefon protejat și stilat.",
+        description: "Aspect premium pentru un telefon protejat și stilat.",
       },
     ],
 
     Cabluri: [
       {
-        name: "Cablu USB-C",
+        name: "Cablu USB-C Fast Charge",
         price: "30 lei",
-        image: "/produs1.jpg",
+        image: "/cablu1.jpg",
         description: "Cablu rapid pentru încărcare și transfer de date.",
       },
       {
-        name: "Cablu Lightning",
+        name: "Cablu Lightning iPhone",
         price: "40 lei",
-        image: "/produs2.jpg",
-        description: "Cablu compatibil iPhone, ideal pentru utilizare zilnică.",
+        image: "/cablu2.jpg",
+        description: "Cablu pentru iPhone, rezistent și potrivit pentru uz zilnic.",
       },
       {
         name: "Cablu Type-C Premium",
         price: "45 lei",
-        image: "/produs3.jpg",
-        description: "Cablu rezistent, cu încărcare rapidă.",
+        image: "/cablu3.jpg",
+        description: "Cablu premium cu încărcare rapidă.",
+      },
+      {
+        name: "Cablu 3 în 1",
+        price: "50 lei",
+        image: "/cablu4.jpg",
+        description: "Compatibil cu mai multe tipuri de telefoane.",
+      },
+    ],
+
+    "Folii de protectie": [
+      {
+        name: "Folie sticlă iPhone",
+        price: "30 lei",
+        image: "/folie1.jpg",
+        description: "Folie de protecție pentru ecran, claritate ridicată.",
+      },
+      {
+        name: "Folie Samsung",
+        price: "35 lei",
+        image: "/folie2.jpg",
+        description: "Protecție bună împotriva zgârieturilor.",
+      },
+      {
+        name: "Folie privacy",
+        price: "50 lei",
+        image: "/folie3.jpg",
+        description: "Protejează ecranul și intimitatea.",
+      },
+    ],
+
+    Casti: [
+      {
+        name: "Căști Bluetooth",
+        price: "De la 70 lei",
+        image: "/casti1.jpg",
+        description: "Sunet clar, conectare rapidă și autonomie bună.",
+      },
+      {
+        name: "Căști gaming",
+        price: "De la 90 lei",
+        image: "/casti2.jpg",
+        description: "Design gaming, confort și sunet puternic.",
+      },
+      {
+        name: "Căști cu fir",
+        price: "De la 35 lei",
+        image: "/casti3.jpg",
+        description: "Căști simple și practice pentru utilizare zilnică.",
+      },
+    ],
+
+    "Baterii externe": [
+      {
+        name: "Power Bank 10.000 mAh",
+        price: "De la 80 lei",
+        image: "/baterie1.jpg",
+        description: "Baterie externă compactă pentru telefon.",
+      },
+      {
+        name: "Power Bank Fast Charge",
+        price: "De la 120 lei",
+        image: "/baterie2.jpg",
+        description: "Încărcare rapidă și capacitate mare.",
+      },
+      {
+        name: "Power Bank Slim",
+        price: "De la 90 lei",
+        image: "/baterie3.jpg",
+        description: "Design subțire, ușor de transportat.",
+      },
+    ],
+
+    Gadgeturi: [
+      {
+        name: "Suport telefon birou",
+        price: "De la 35 lei",
+        image: "/gadget1.jpg",
+        description: "Accesoriu practic pentru birou sau acasă.",
+      },
+      {
+        name: "Mini speaker",
+        price: "De la 60 lei",
+        image: "/gadget2.jpg",
+        description: "Boxă compactă pentru muzică și entertainment.",
+      },
+      {
+        name: "Accesoriu gaming",
+        price: "Preț la cerere",
+        image: "/gadget3.jpg",
+        description: "Gadget util pentru zona gaming și telefon.",
+      },
+    ],
+
+    "Suporti auto": [
+      {
+        name: "Suport auto magnetic",
+        price: "De la 40 lei",
+        image: "/suport1.jpg",
+        description: "Fixare rapidă și sigură în mașină.",
+      },
+      {
+        name: "Suport auto cu ventuză",
+        price: "De la 50 lei",
+        image: "/suport2.jpg",
+        description: "Poziționare ușoară și stabilitate bună.",
+      },
+      {
+        name: "Suport auto premium",
+        price: "De la 70 lei",
+        image: "/suport3.jpg",
+        description: "Design premium și prindere stabilă.",
+      },
+    ],
+
+    Adaptoare: [
+      {
+        name: "Adaptor USB-C",
+        price: "De la 30 lei",
+        image: "/adaptor1.jpg",
+        description: "Adaptor practic pentru încărcare și conectivitate.",
+      },
+      {
+        name: "Adaptor Lightning",
+        price: "De la 40 lei",
+        image: "/adaptor2.jpg",
+        description: "Compatibil cu dispozitive Apple.",
+      },
+      {
+        name: "Adaptor audio",
+        price: "De la 25 lei",
+        image: "/adaptor3.jpg",
+        description: "Adaptor pentru sunet și accesorii audio.",
       },
     ],
   };
 
-  const products = productsByCategory[selectedCategory] || [
-    {
-      name: "Produs disponibil în magazin",
-      price: "Preț la cerere",
-      image: "/produs1.jpg",
-      description: "Contactează-ne pe WhatsApp pentru detalii și disponibilitate.",
-    },
-    {
-      name: "Produs premium GSM",
-      price: "Preț la cerere",
-      image: "/produs2.jpg",
-      description: "Produs disponibil în funcție de stoc.",
-    },
-    {
-      name: "Accesoriu GSM",
-      price: "Preț la cerere",
-      image: "/produs3.jpg",
-      description: "Întreabă-ne rapid pe WhatsApp pentru compatibilitate.",
-    },
-  ];
+  const products = productsByCategory[selectedCategory] || [];
 
   if (view === "category") {
     return (
@@ -101,7 +214,7 @@ export default function App() {
 
         <div className="service-container">
           <button className="back-button" onClick={() => setView("home")}>
-            ← Inapoi
+            ← Înapoi
           </button>
 
           <div className="service-card">
@@ -110,25 +223,27 @@ export default function App() {
             <h1 className="service-title">{selectedCategory}</h1>
 
             <p className="service-description">
-              Produse selectate pentru categoria {selectedCategory}. Detalii și
-              disponibilitate direct pe WhatsApp.
+              Produse selectate pentru categoria {selectedCategory}. Pentru
+              detalii, compatibilitate și disponibilitate, ne poți contacta rapid
+              pe WhatsApp.
             </p>
 
             <div className="product-grid">
               {products.map((product, index) => (
                 <div className="product-card" key={index}>
                   <img src={product.image} alt={product.name} />
+
                   <h3>{product.name}</h3>
                   <p>{product.price}</p>
                   <p className="product-description">{product.description}</p>
 
                   <a
-                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza: ${product.name}`}
+                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza produsul: ${product.name}`}
                     target="_blank"
                     rel="noreferrer"
                     className="whatsapp-button product-btn"
                   >
-                    Intreaba pe WhatsApp
+                    Întreabă pe WhatsApp
                   </a>
                 </div>
               ))}
@@ -147,7 +262,7 @@ export default function App() {
 
         <div className="service-container">
           <button className="back-button" onClick={() => setView("home")}>
-            ← Inapoi
+            ← Înapoi
           </button>
 
           <div className="service-card">
@@ -156,14 +271,14 @@ export default function App() {
             <h1 className="service-title">Cu ce te putem ajuta?</h1>
 
             <p className="service-description">
-              Spune-ne rapid ce problema ai, iar noi te ajutam in cel mai scurt
-              timp. Pentru raspuns rapid, scrie-ne direct pe WhatsApp.
+              Spune-ne rapid ce problemă ai, iar noi te ajutăm în cel mai scurt
+              timp. Pentru răspuns rapid, scrie-ne direct pe WhatsApp.
             </p>
 
             <div className="service-grid">
               <div className="service-box">Schimb display</div>
               <div className="service-box">Schimb baterie</div>
-              <div className="service-box">Probleme la incarcare</div>
+              <div className="service-box">Probleme la încărcare</div>
               <div className="service-box">Montaj folie</div>
               <div className="service-box">Diagnostic rapid</div>
               <div className="service-box">Alte probleme GSM</div>
@@ -180,7 +295,7 @@ export default function App() {
               </a>
 
               <a href="tel:0756423828" className="call-button">
-                Suna acum
+                Sună acum
               </a>
             </div>
 
@@ -191,8 +306,8 @@ export default function App() {
               </div>
 
               <div className="contact-card">
-                <span className="label">Locatie</span>
-                <strong>Mall Baneasa · in fata la Media Galaxy</strong>
+                <span className="label">Locație</span>
+                <strong>Mall Băneasa · în fața la Media Galaxy</strong>
               </div>
             </div>
           </div>
@@ -208,13 +323,13 @@ export default function App() {
 
       <header className="hero">
         <div className="hero-left">
-          <div className="top-tag">HOBBY GSM · FABY GSM</div>
+          <div className="top-tag">STELIX · FABY GSM</div>
 
-          <h1 className="main-title">HOBBY GSM Experience</h1>
+          <h1 className="main-title">Premium GSM & Gaming Experience</h1>
 
           <p className="hero-text">
-            Accesorii GSM, produse premium si service rapid intr-un stil modern,
-            futurist, cu imagine puternica si contact direct pentru clienti.
+            Accesorii GSM, gaming, gadgeturi și service rapid într-un stil
+            modern, premium, inspirat din tehnologie, lumină și design futurist.
           </p>
 
           <div className="hero-buttons">
@@ -239,7 +354,7 @@ export default function App() {
             <div className="logo-name">FABY GSM</div>
             <div className="logo-sub">STAY IN STYLE</div>
             <div className="mini-line"></div>
-            <div className="mini-text">QUALITY · SPEED · STYLE</div>
+            <div className="mini-text">GEAR UP · PLAY HARD · STAY IN STYLE</div>
           </div>
         </div>
       </header>
@@ -247,7 +362,7 @@ export default function App() {
       <section className="category-section" id="categorii">
         <div className="section-head">
           <p className="section-tag">CATEGORII</p>
-          <h2>Butoane rapide pentru produsele tale</h2>
+          <h2>Alege rapid categoria dorită</h2>
         </div>
 
         <div className="category-grid">
@@ -272,15 +387,34 @@ export default function App() {
             <p className="section-tag">SERVICE</p>
             <h2>Service GSM Rapid</h2>
             <p className="service-fast-text">
-              Apasa pe butonul de mai jos si intri intr-o pagina dedicata unde
-              clientul poate vedea imediat cum sa ia legatura cu tine pentru
-              ajutor rapid.
+              Probleme cu telefonul? Intră în pagina de service și contactează-ne
+              rapid pentru display, baterie, încărcare, folie sau diagnostic.
             </p>
           </div>
 
           <button className="service-big-btn" onClick={() => setView("service")}>
             SERVICE GSM RAPID
           </button>
+        </div>
+      </section>
+
+      <section className="service-fast-section">
+        <div className="service-fast-card">
+          <div>
+            <p className="section-tag">DESPRE NOI</p>
+            <h2>Memorium STELIX · FABY GSM</h2>
+            <p className="service-fast-text">
+              STELIX GSM este un concept construit pe experiență, seriozitate și
+              pasiune pentru tehnologie. Cu peste 10 ani în zona GSM, gaming și
+              gadgeturi, ne dorim să oferim produse atent alese, design modern și
+              o experiență premium pentru fiecare client.
+            </p>
+            <p className="service-fast-text">
+              Standurile noastre sunt gândite pentru spații comerciale moderne,
+              cu lumină LED, vitrine curate și o imagine futuristă care atrage
+              atenția și inspiră încredere.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -291,8 +425,8 @@ export default function App() {
         </div>
 
         <div className="contact-item">
-          <span className="label">Locatie</span>
-          <strong>Mall Baneasa · in fata la Media Galaxy</strong>
+          <span className="label">Locație</span>
+          <strong>Mall Băneasa · în fața la Media Galaxy</strong>
         </div>
 
         <div className="contact-item">

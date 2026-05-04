@@ -5,6 +5,8 @@ export default function App() {
   const [view, setView] = useState("home");
   const [selectedCategory, setSelectedCategory] = useState("");
 
+  const phone = "40756423828";
+
   const categories = [
     "Adaptoare",
     "Cabluri",
@@ -14,6 +16,36 @@ export default function App() {
     "Folii de protectie",
     "Gadgeturi",
     "Baterii externe",
+  ];
+
+  const serviceOptions = [
+    "Schimb display",
+    "Schimb baterie",
+    "Probleme la încărcare",
+    "Montaj folie",
+    "Diagnostic rapid",
+    "Alte probleme GSM",
+  ];
+
+  const locations = [
+    {
+      name: "FABY GSM - Băneasa Shopping City",
+      details: "În fața la Media Galaxy",
+      googleMaps: "https://www.google.com/maps/search/?api=1&query=Baneasa+Shopping+City+Media+Galaxy",
+      waze: "https://waze.com/ul?q=Baneasa%20Shopping%20City%20Media%20Galaxy",
+    },
+    {
+      name: "Locația 2",
+      details: "Adaugăm aici adresa exactă",
+      googleMaps: "https://www.google.com/maps",
+      waze: "https://waze.com/ul",
+    },
+    {
+      name: "Locația 3",
+      details: "Adaugăm aici adresa exactă",
+      googleMaps: "https://www.google.com/maps",
+      waze: "https://waze.com/ul",
+    },
   ];
 
   const productsByCategory = {
@@ -206,6 +238,60 @@ export default function App() {
 
   const products = productsByCategory[selectedCategory] || [];
 
+  const serviceMessage = (service) =>
+    `Bună ziua! Mă interesează serviciul: ${service}. Ce model de telefon aveți exact? Din ce zonă sunteți? Vom reveni imediat cu o ofertă și timpul estimat pentru reparație.`;
+
+  if (view === "locations") {
+    return (
+      <div className="page service-page">
+        <div className="bg-image"></div>
+        <div className="bg-overlay"></div>
+
+        <div className="service-container">
+          <button className="back-button" onClick={() => setView("home")}>
+            ← Înapoi
+          </button>
+
+          <div className="service-card">
+            <div className="small-badge">LOCAȚII</div>
+            <h1 className="service-title">Alege locația dorită</h1>
+
+            <p className="service-description">
+              Alege locația cea mai apropiată și deschide rapid traseul în Google Maps sau Waze.
+            </p>
+
+            <div className="product-grid">
+              {locations.map((loc, index) => (
+                <div className="product-card" key={index}>
+                  <h3>{loc.name}</h3>
+                  <p className="product-description">{loc.details}</p>
+
+                  <a
+                    href={loc.googleMaps}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="whatsapp-button product-btn"
+                  >
+                    Google Maps
+                  </a>
+
+                  <a
+                    href={loc.waze}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="call-button product-btn"
+                  >
+                    Waze
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (view === "category") {
     return (
       <div className="page category-page">
@@ -223,9 +309,8 @@ export default function App() {
             <h1 className="service-title">{selectedCategory}</h1>
 
             <p className="service-description">
-              Produse selectate pentru categoria {selectedCategory}. Pentru
-              detalii, compatibilitate și disponibilitate, ne poți contacta rapid
-              pe WhatsApp.
+              Produse selectate pentru categoria {selectedCategory}. Pentru detalii,
+              compatibilitate și disponibilitate, ne poți contacta rapid pe WhatsApp.
             </p>
 
             <div className="product-grid">
@@ -238,7 +323,9 @@ export default function App() {
                   <p className="product-description">{product.description}</p>
 
                   <a
-                    href={`https://wa.me/40756423828?text=Buna! Ma intereseaza produsul: ${product.name}`}
+                    href={`https://wa.me/${phone}?text=${encodeURIComponent(
+                      `Bună ziua! Mă interesează produsul: ${product.name}. Este disponibil? Pentru ce model este compatibil?`
+                    )}`}
                     target="_blank"
                     rel="noreferrer"
                     className="whatsapp-button product-btn"
@@ -271,22 +358,30 @@ export default function App() {
             <h1 className="service-title">Cu ce te putem ajuta?</h1>
 
             <p className="service-description">
-              Spune-ne rapid ce problemă ai, iar noi te ajutăm în cel mai scurt
-              timp. Pentru răspuns rapid, scrie-ne direct pe WhatsApp.
+              Alege problema, iar WhatsApp se deschide automat cu mesajul pregătit.
             </p>
 
             <div className="service-grid">
-              <div className="service-box">Schimb display</div>
-              <div className="service-box">Schimb baterie</div>
-              <div className="service-box">Probleme la încărcare</div>
-              <div className="service-box">Montaj folie</div>
-              <div className="service-box">Diagnostic rapid</div>
-              <div className="service-box">Alte probleme GSM</div>
+              {serviceOptions.map((service) => (
+                <a
+                  key={service}
+                  className="service-box"
+                  href={`https://wa.me/${phone}?text=${encodeURIComponent(
+                    serviceMessage(service)
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {service}
+                </a>
+              ))}
             </div>
 
             <div className="cta-row">
               <a
-                href="https://wa.me/40756423828"
+                href={`https://wa.me/${phone}?text=${encodeURIComponent(
+                  "Bună ziua! Am nevoie de ajutor pentru un produs sau service GSM."
+                )}`}
                 target="_blank"
                 rel="noreferrer"
                 className="whatsapp-button"
@@ -306,8 +401,12 @@ export default function App() {
               </div>
 
               <div className="contact-card">
-                <span className="label">Locație</span>
-                <strong>Mall Băneasa · în fața la Media Galaxy</strong>
+                <span className="label">Locații</span>
+                <strong>Avem 3 locații disponibile</strong>
+                <br />
+                <button className="back-button" onClick={() => setView("locations")}>
+                  Vezi locațiile
+                </button>
               </div>
             </div>
           </div>
@@ -328,14 +427,14 @@ export default function App() {
           <h1 className="main-title">Premium GSM & Gaming Experience</h1>
 
           <p className="hero-text">
-            Accesorii GSM, gaming, gadgeturi și service rapid într-un stil
-            modern, premium, inspirat din tehnologie, lumină și design futurist.
+            Accesorii GSM, gaming, gadgeturi și service rapid într-un stil modern,
+            premium, inspirat din tehnologie, lumină și design futurist.
           </p>
 
           <div className="hero-buttons">
             <a
               className="primary-btn"
-              href="https://wa.me/40756423828"
+              href={`https://wa.me/${phone}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -345,6 +444,10 @@ export default function App() {
             <a className="secondary-btn" href="#categorii">
               Vezi categoriile
             </a>
+
+            <button className="secondary-btn" onClick={() => setView("locations")}>
+              Vezi locațiile
+            </button>
           </div>
         </div>
 
@@ -387,8 +490,7 @@ export default function App() {
             <p className="section-tag">SERVICE</p>
             <h2>Service GSM Rapid</h2>
             <p className="service-fast-text">
-              Probleme cu telefonul? Intră în pagina de service și contactează-ne
-              rapid pentru display, baterie, încărcare, folie sau diagnostic.
+              Probleme cu telefonul? Intră în pagina de service și contactează-ne rapid.
             </p>
           </div>
 
@@ -425,8 +527,12 @@ export default function App() {
         </div>
 
         <div className="contact-item">
-          <span className="label">Locație</span>
-          <strong>Mall Băneasa · în fața la Media Galaxy</strong>
+          <span className="label">Locații</span>
+          <strong>3 locații disponibile</strong>
+          <br />
+          <button className="back-button" onClick={() => setView("locations")}>
+            Vezi locațiile
+          </button>
         </div>
 
         <div className="contact-item">
